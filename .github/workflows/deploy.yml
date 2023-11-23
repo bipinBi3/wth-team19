@@ -10,4 +10,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}   
+      - uses: azure/arm-deploy@v1
+        with:
+          subscriptionId: <YourSubscriptionId>
+          resourceGroupName: <YourResourceGroup>
+          template: <path/to/azuredeploy.json>
