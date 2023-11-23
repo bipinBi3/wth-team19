@@ -1,7 +1,9 @@
 name: Test
 
-on: [push]
-
+on: 
+  issues:
+    types: [opened, edited, milestoned]
+  push:
 jobs:
   job1:
     name: 
