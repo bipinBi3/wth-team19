@@ -7,11 +7,16 @@
 			"version": "latest"
 		}
 	},
+		"github-copilot": {
+			"install": true,
+			"version": "latest"
+		},
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"Codeium.codeium"
 			]
 		}
-	}
+	},
+	"postCreateCommand": "cd /workspaces/your-repo/Application && dotnet restore"
 }
