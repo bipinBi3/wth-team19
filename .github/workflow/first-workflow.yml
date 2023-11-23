@@ -1,0 +1,16 @@
+name: Test
+
+on: [push]
+
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo one
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Echo Two
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+        run: echo "$JOB_CONTEXT"
