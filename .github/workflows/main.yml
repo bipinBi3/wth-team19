@@ -3,16 +3,17 @@ name: Test
 on: [push]
 
 jobs:
-  one:
+  job1:
+    name: 
     runs-on: ubuntu-latest
     steps:
-      - name: Echo one
-        run: echo "something"
-      - name: Echo Two
-        run: echo "something-else"
+      - name: step1
+        run: echo "step1"
+      - name: step2
+        run: echo "step2"
 
   job2:
-    needs: one
+    needs: job1
     name: Cowsays
     runs-on: ubuntu-latest
     steps:
