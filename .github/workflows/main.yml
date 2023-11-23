@@ -12,6 +12,7 @@ jobs:
         run: echo "something-else"
 
   job2:
+    needs: one
     name: Cowsays
     runs-on: ubuntu-latest
     steps:
