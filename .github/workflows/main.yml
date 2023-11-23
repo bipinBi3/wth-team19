@@ -10,3 +10,13 @@ jobs:
         run: echo "something"
       - name: Echo Two
         run: echo "something-else"
+
+  job2:
+    name: Cowsays
+    runs-on: ubuntu-latest
+    steps:
+    - name: Ship it
+      uses: mscoutermarsh/cowsays-action@master
+      with:
+        text: 'ship ship ship!'
+        color: 'red'
