@@ -1,7 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 env:
-   registryName: 7lgtmdr3et7g6wthregdevopsreg.azurecr.io
+   registryName: 7lgtmdr3et7g6wthreg.azurecr.io
    repositoryName: wth/dotnetcoreapp
    dockerFolderPath: Application/src/RazorPagesTestSample
    tag: ${{ github.run_id }}
