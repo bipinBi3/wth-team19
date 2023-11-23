@@ -18,5 +18,5 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd /workspaces/your-repo/Application && dotnet restore"
+	"postCreateCommand": "dotnet restore"
 }
