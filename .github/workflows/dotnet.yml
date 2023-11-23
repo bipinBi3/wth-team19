@@ -26,3 +26,14 @@ jobs:
       run: dotnet build --no-restore "Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj"
     - name: Test
       run: dotnet test --no-build --verbosity normal "Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj"
+  docker-login:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Docker login
+      run: docker login $registryName -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }}
+    - name: Docker build
+      run: docker build -t $registryName/$repositoryName:$tag --build-arg 
+    - name: Docker push
+      run: docker push $registryName/$repositoryName:$tag
